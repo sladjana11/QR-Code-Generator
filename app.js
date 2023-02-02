@@ -3,11 +3,6 @@ const chanelType = document.getElementById('chanel');
 const form = document.getElementById('form');
 const submitBtn = document.getElementById('submit');
 const main = document.querySelector('main');
-const date = document.getElementById('date');
-const codeTypeOutput = document.getElementById('type-output');
-const chanelOutput = document.getElementById('chanel-output');
-const numberOfUsedCode = document.getElementById('count');
-const qrCode = document.getElementById('qr-code');
 const download = document.getElementById('download');
 const deleteBtn = document.getElementById('delete');
 const loading = document.querySelector('.loader');
@@ -144,7 +139,6 @@ function removeCard(e){
 
 // Remove Card From Storage
 function removeCardFromStorage(identifier){
-   console.log(identifier);
    let items;
    if(localStorage.getItem('items') === null){
       items = [];
@@ -152,7 +146,7 @@ function removeCardFromStorage(identifier){
       items = JSON.parse(localStorage.getItem('items'));
    }
    let id;
-        items.forEach((el,index)=> {
+        items.forEach((el,index) => {
             id = el.identifier === identifier && index;
         });
         items.splice(id,1)

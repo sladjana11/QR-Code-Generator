@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="style.css">
+   <title>QR Code Generator</title>
+</head>
+<body>
+   <div class="container">
+
+   <!-- Form -->
+       <h2>QR Code Generator</h2>
+       <p class="explain">Generate QR code by picking type of discount and where it will be presented</p>
+
+       <form id="form" class="form">
+        
+         <div class="form-control">
+            <label for="discount">Select type of discount</label>
+            <select name="Type-of-Code" id="code-type" class="code-type">
+               <option value="2 Beers for 1">2 Beers for 1</option>
+               <option value="30% Discount on Beer and Food">30% Discount on Beer and Food</option>
+            </select>
+         </div>
+
+         <div class="form-control">
+            <label for="input">Enter a chanel of advertizing </label>
+            <input type="text" id="chanel">
+            <small></small>
+         </div>
+
+         <button type="submit" id="submit" class="btn btn-dark">Generate</button>
+
+      </form>
+
+   <!-- Saved Code -->    
+      <main id="answer" class="answer"> 
+      </main>
+
+   <!-- Loader -->
+   <div class="loader-container" id="loader-container">
+      <div class="loader">
+         <div class="circle"></div>
+         <div class="circle"></div>
+         <div class="circle"></div>
+      </div>
+   </div>
+
+   </div>
+  <script src="app.js"></script> 
+</body>
+</html>
